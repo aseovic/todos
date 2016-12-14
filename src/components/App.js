@@ -12,6 +12,7 @@ const App = ({user, todos, actions}) => {
   const responseFacebook = (user) => {
     console.log(user);
     actions.login(user);
+    actions.fetchAllTodos(user);
   };
 
   if (user.name) {
@@ -53,6 +54,9 @@ const mapDispatchToProps = dispatch => ({
   actions: {
     login:                 (user)     => {
       dispatch(UserActions.login(user))
+    },
+    fetchAllTodos:        (user)     => {
+      dispatch(TodoActions.fetchAllTodos(user))
     },
     addTodoRequest:        (user, text)     => {
       dispatch(TodoActions.addTodoRequest(user, text))
