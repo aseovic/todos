@@ -4,9 +4,10 @@ To Do List is a simple task management application that allows users to add, com
 delete tasks within a list.
 
 The backend is implemented using Node.js and Express, and uses MongoDB instance hosted by Compose in the same GCE zone. 
-The frontend is implemented using React and Redux, and uses Facebook Login to authenticate users. Basically, the goal was
-to demonstrate how to leverage external services available in the cloud in order to minimize the amount of work and the
-operational requirements for the application.
+The frontend is implemented using React and Redux, and uses Facebook Login to authenticate users. 
+
+Basically, the goal was to demonstrate how to leverage external services available in the cloud in order 
+to minimize the amount of work and the operational requirements for the application.
 
 ## Production application
 
