@@ -21,8 +21,8 @@ app.use('/api', todosApi);
 const port = process.env.PORT || 3000;
 const env  = process.env.NODE_ENV || 'production';
 
-//const mongoUrl = "mongodb://todos-app:todos-pass@gcp-us-east1-cpu.0.dblayer.com:15362,gcp-us-east1-cpu.1.dblayer.com:15362/admin?ssl=true";
-const mongoUrl = "mongodb://localhost:27017/todos";
+const mongoUrl = "mongodb://todos-app:todos-pass@gcp-us-east1-cpu.0.dblayer.com:15362,gcp-us-east1-cpu.1.dblayer.com:15362/todos?ssl=true";
+//const mongoUrl = "mongodb://localhost:27017/todos";
 
 MongoClient.connect(mongoUrl, {promiseLibrary: Promise}, (err, db) => {
   if (err) {
