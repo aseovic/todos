@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: todos
+  labels:
+    app: todos
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 3000
+  selector:
+    app: todos
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: todos
+  labels:
+    app: todos
+spec:
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: todos
+    spec:
+      containers:
+      - name: todos
+        image: aseovic/todos:0.1.0
+        resources:
+          requests:
+            cpu: 100m
+            memory: 1000Mi
+        env:
+        - name: GET_HOSTS_FROM
+          value: dns
+        ports:
+        - containerPort: 3000
+
