@@ -16,6 +16,10 @@ and can be accessed at:
 
 http://todos.seovic.net/
 
+## Native iOS Client 
+
+There is also a native iOS client for the application. See https://github.com/aseovic/todos-native for details.
+
 ## Building and running the application locally
  
 After cloning the project you can build and run the application locally by executing following steps:
