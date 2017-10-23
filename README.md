@@ -32,7 +32,8 @@ will install all the dependencies into the `node_modules` directory
 ```
 npm run build
 ```
-will compile React application into a single JavaScript bundle for production, and finally
+will compile React application into a single JavaScript bundle for production.  If you run into an error about 
+`Unknown plugin "transform-object-assign"`, it has been observed that `npm install babel-plugin-transform-object-assign --save` resolves that error.  Finally
 
 ```
 npm start
